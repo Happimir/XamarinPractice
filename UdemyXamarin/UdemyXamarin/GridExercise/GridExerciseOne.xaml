@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UdemyXamarin.GridExercise.GridExerciseOne">
+    <Grid
+        
+        x:Name="MyGrid"
+        BackgroundColor="#354242"
+          Padding="40"
+          RowSpacing="10"
+          ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label  x:Name="PinNum" TextColor="White" Grid.Row="0" Grid.ColumnSpan="3" VerticalOptions="Center" Text="{Binding PinNumber, Mode=TwoWay}"
+                HorizontalOptions="Center" FontSize="50"></Label>
+        <Button x:Name = "btn1" Grid.Row="1" Grid.Column="0" Text="1"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn1}"/>
+        <Button x:Name = "btn2" Grid.Row="1" Grid.Column="1" Text="2"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn2}"/>
+        <Button x:Name = "btn3" Grid.Row="1" Grid.Column="2" Text="3"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn3}"/>
+        <Button x:Name = "btn4" Grid.Row="2" Grid.Column="0" Text="4"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn4}"/>
+        <Button x:Name = "btn5" Grid.Row="2" Grid.Column="1" Text="5"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn5}"/>
+        <Button x:Name = "btn6" Grid.Row="2" Grid.Column="2" Text="6"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn6}"/>
+        <Button x:Name = "btn7" Grid.Row="3" Grid.Column="0" Text="7"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn7}"/>
+        <Button x:Name = "btn8" Grid.Row="3" Grid.Column="1" Text="8"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn8}"/>
+        <Button x:Name = "btn9" Grid.Row="3" Grid.Column="2" Text="9"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn9}"/>
+        <Button x:Name = "btn0" Grid.Row="4" Grid.Column="1" Text="0"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btn0}"/>
+        <Button x:Name = "btnx" Grid.Row="4" Grid.Column="2" Text="X"  BackgroundColor="#fff" TextColor="#28282c" FontSize="30" CornerRadius="30" Command="{Binding TapCommand}" CommandParameter="{x:Reference btnx}"/>
+        <Button Grid.Row="4" Grid.Column="0" Text="Clear"  BackgroundColor="#fff" TextColor="#28282c" FontSize="20" CornerRadius="30" Command="{Binding ClearCommand}"/>
+    </Grid>
+</ContentPage>

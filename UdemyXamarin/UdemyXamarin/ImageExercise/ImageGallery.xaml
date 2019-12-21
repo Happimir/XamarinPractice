@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UdemyXamarin.ImageExercise.ImageGallery"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Orientation="Horizontal"
+                         Padding="20, 20, 20, 20"
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 0.1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <Button HorizontalOptions="StartAndExpand"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        Text="Back"
+                        Padding="5, 5, 5, 5"
+                        Command="{Binding BackCommand}"/>
+                <ActivityIndicator IsRunning="{Binding Source={x:Reference ImageOne},
+                                    Path=IsLoading}"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="Start">
+
+                </ActivityIndicator>
+                <Button HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Start"
+                        TextColor="White"
+                        Text="Next"
+                        Padding="5, 5, 5, 5"
+                        Command="{Binding NextCommand}"/>
+            </StackLayout>
+            <Image 
+                x:Name="ImageOne"
+                   Source="{Binding UrlSource}" 
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 0.5"
+                   AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+           
+        
+    </ContentPage.Content>
+</ContentPage>

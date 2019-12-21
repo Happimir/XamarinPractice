@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UdemyXamarin.StackLayoutExercise.StackPage2">
+    <StackLayout BackgroundColor="White"
+                 Orientation="Vertical">
+        <Label HorizontalOptions="Fill"
+               Padding="5, 20, 0, 5">
+               nyc_photographer
+        </Label>
+            <Image
+            
+            Source="https://upload.wikimedia.org/wikipedia/commons/9/98/Old_falsterbo.jpg"
+                HeightRequest="300"
+                HorizontalOptions="Fill"
+               >
+
+            </Image>
+
+            <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Fill">
+            <Button Text="Like" BackgroundColor="White" TextColor="Blue"></Button>
+            <Button Text="Comment" BackgroundColor="White" TextColor="Blue"></Button>
+            <Button Text="Share" BackgroundColor="White" TextColor="Blue"></Button>
+        </StackLayout>
+        <BoxView Color="#f0f0f0" HeightRequest="1" 
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Start"></BoxView>
+        <Label FontAttributes="Bold"
+               Padding="5, 0, 0, 0">
+            700 likes
+        </Label>
+        <Label HorizontalOptions="Fill"
+               VerticalOptions="Start"
+               Padding="5, 6, 0, 0">
+            This is a shot yesterday in Skanor, Sweden, when driving, from a couple of days of work in Denmark.
+        </Label>
+    </StackLayout>
+</ContentPage>
